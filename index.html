@@ -2,6 +2,7 @@
 <html>
 
 	<head>
+		<meta charset="UTF-8">
 		<title>Wimtie</title>
 		<link rel="stylesheet" href="/style.css"  />
 		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
@@ -30,6 +31,22 @@
 			$(document).ready(function() {
 				$.fn.fullpage();
 			});
+
+
+			function plaster(section, text) {
+				for (var i = 0; i < 15; i++) {
+					var span = $(document.createElement("span"));
+					span.html(text);
+					span.addClass("cthulhutext");
+					span.css("left", getRandom(0, $(window).width()) + "px");
+					span.css("top", getRandom(0, $(window).height()) + "px");
+					$("#" + section).append(span);
+				}
+			}
+
+			function getRandom (min, max) {
+			    return Math.random() * (max - min) + min;
+			}
 
 		</script>
 	</head>
@@ -72,34 +89,30 @@ nEJGz7jP2XshkIG8l9En9iycOfrYwFbEhA2Y8RwZ+lcpGXLLv+Gf1QA=
 				</pre>
 			</div>
 			<div class="info">
-				<h1 title="Info">&#x24D8;</h1>
+				<h1 onclick="plaster('s1','<text>Gęn̷er̛a͏l͘ ͜i̕nf̴o͠rm͡a͟t͢ion͏</text>')" title="Info">&#x24D8;</h1>
 				<p class="infoitem"><a href="mailto:tim@wimtie.org" target="_blank"><img src="img/mail2.png" class="labelicon" />tim@wimtie.org</a></p>
 				<p class="infoitem"><a href="#" data-reveal-id="gpgpubkey" onclick="showKey()"><img src="img/key.png" class="labelicon" />GPG key</a></p>
 			</div>
 			<div class="downarrow">&#x21DF;</div>
 		</div>
 		<div class="section" id="s2">
+			<div class="uparrow">&#x21DE;</div>
 			<div class="info">
-				<h1 title="Music">&#x266B;</h1>
+				<h1 onclick="plaster('s2', 'M҉us̵ical ҉mu͡s͢in͠g̡s')" title="Music">&#x266B;</h1>
 				<p class="infoitem"><a href="http://www.bodypoliticsmusic.com" target="_blank">Bodypolitics</a></p>
 				<p class="infoitem"><a href="https://soundcloud.com/wimtie-pekelhaas" target="_blank">SoundCloud</a></p>
 			</div>
 			<div class="downarrow">&#x21DF;</div>
 		</div>
 		<div class="section" id="s3">
+			<div class="uparrow">&#x21DE;</div>
 			<div class="info">
-				<h1 title="Social / misc.">&#x263B;</h1>
+				<h1 onclick="plaster('s3', 'S̸o͢ci̧aa̕aa̢ll͞ll̡l')" title="Social / misc.">&#x263B;</h1>
 				<p class="infoitem"><a href="https://www.twitter.com/wimtie" target="_blank"><img src="img/twitter2.png" class="labelicon" />Twitter</a></p>
 				<p class="infoitem"><a href="https://www.linkedin.com/pub/tim-lamballais-tessensohn/19/446/33b" target="_blank"><img src="img/linkedin.png" class="labelicon" />Linkedin</a></p>
 				<p class="infoitem"><a href="http://stackoverflow.com/users/740027/tim-lamballais" target="_blank"><img src="img/so.png" class="labelicon" />stackoverflow</a></p>
 				<p class="infoitem"><a href="https://github.com/wimtie" target="_blank"><img src="img/github.png" class="labelicon" />GitHub</a></p>
 			</div>
 		</div>
-		<!--
-		<div class="section" id="s4">
-			<div class="info">
-				<p>lbaat</p>
-			</div>
-		</div>-->
 	</body>
 </html>
