@@ -1,0 +1,116 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	font: normal normal 13px Helvetica, FreeSans, Arial, Tahoma, sans-serif;
+/*	font-family: 'Open Sans',sans-serif;*/
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 30px;
+	cursor: default;
+}
+
+.labelicon {
+	vertical-align: middle;
+	margin: 0 8px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	transition: color 100ms ease-in-out;
+}
+
+a:hover {
+	color: #881111;
+}
+
+.info {
+	margin: 0 auto 0 auto;
+	padding: 20px;
+	background: #fcf3f3;
+	width: 400px;
+	/*top: 50%;*/
+	opacity: .8;
+	transition: opacity 400ms ease-in-out;
+}
+
+.info:hover {
+	opacity: 1;
+}
+
+p.infoitem {
+	margin: 13px 0;
+	height: 30px;
+}
+
+div #gpgpubkey {
+	position: absolute;
+	z-index: 100;
+	top: -1000px;
+	/*left: 30%;*/
+	transition: all 400ms ease-in-out;
+	padding: 20px;
+        background: #fcf3f3;
+
+}
+
+div#overlay {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	display: none;
+	opacity: 0.1;
+	transform: all 400ms ease-in-out;
+}
+
+#s1 {
+	background-image: url("img/bass.jpg");
+}
+#s2 {
+	background-image: url("img/soundcheck.jpg");
+}
+#s3 {
+	background-image: url("img/bari.jpg");
+	background-position: center bottom;
+}
+#s4 {
+	background-image: url("img/forest.jpg");
+}
+
+.downarrow {
+	text-align: center;
+	width: 100%;
+	bottom: 30px;
+	position: absolute;
+	color: white;
+	font-size: 40px;
+	text-shadow:0 0 50px gold,0 0 150px gold;
+	-moz-animation: glowpulse 2s infinite;
+	-webkit-animation: glowpulse 2s infinite;
+}
+
+@-moz-keyframes glowpulse
+{
+	0% {text-shadow: 0px 0px 10px #666666; }
+	50% {text-shadow: 0px 0px 25px gold;}
+	100% {text-shadow: 0px 0px 10px #666666; }
+}
+@-webkit-keyframes glowpulse
+{
+	0% {text-shadow: 0px 0px 10px #666666; }
+	50% {text-shadow: 0px 0px 25px gold;}
+	100% {text-shadow: 0px 0px 10px #666666; }
+}
+

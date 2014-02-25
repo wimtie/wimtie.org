@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Wimtie</title>
+		<link rel="stylesheet" href="/style.css"  />
+		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>    
+		<script type="text/javascript" src="jquery.fullPage.js"></script>
+		<!--<script src="jquery.reveal.js" type="text/javascript"></script>-->
+		<script type="text/javascript">
+
+			function showKey() {
+				var div = $("#gpgpubkey");
+				var leftpx = ($(window).width() / 2) - (div.width() / 2);
+				div.css("left", leftpx + "px");
+				$("#gpgpubkey").css("top","20%");
+				$("#overlay").css("display", "block");
+				$("#overlay").fadeTo(500, 0.6);
+			}
+
+			function hideKey() {
+				$("#gpgpubkey").css("top","-600px");
+				$("#overlay").fadeTo(500, 0, function() {
+					$("#overlay").css("display", "none");
+				});
+			}
+
+			$(document).ready(function() {
+				$.fn.fullpage();
+			});
+
+		</script>
+	</head>
+	<body>
+		<div class="section" id="s1">
+		<div id="overlay" onclick="hideKey()">
+		</div>
+			<div id="gpgpubkey">
+				<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+mQENBFMLOOkBCADWeglLK5+47LACj0OP/T4lmvg6ChTjWmvgRlVP6B9ocUMVDz0u
+jS+cMm4yHx+J1dfrLMRfhKSEi2uJzhGu+UGSTHIkl/qQDX0rs8BBu/HY3cyX9te8
+C31iOw4Tk9mOJzpBfiaUUVuQsbHdGKp1NZzZZTlq7Vo51QVRwSx834EcOzSp9X5L
+CZF8B2w0VYSL4MdGKjUV1gHObL6HmI5DH95Dd1Zt77i/kWd06MVK+0DPEuSRzOIY
+J/VwfEz6s+vQmr/5XN4bc8vSMNLzsBj6RlYOUZF0qQeI1wlAlNN8oOMS8n1oG5Y8
+KBqj/0cOilC5ozoWJRsoq4tlIraqWcxEiryrABEBAAG0KlRpbSBMYW1iYWxsYWlz
+IFRlc3NlbnNvaG4gPHRpbUB3aW10aWUub3JnPokBOAQTAQIAIgUCUws46QIbAwYL
+CQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQLob3x+A5tIrkGQgAzugF7KOQawAv
+/a0aKl2zaOIkVah080vID137rpPGZaQbCjt3yk62ORFRkTi8pP9EgVR25YrGQFou
+jMAI+PIPw89cOkDNpwHFSp62zdUfrUN/2/ctajikVBqCu28oBN3nOjL80Sug95UI
+9t59KQXtFNfj2lke9kl9zoDyebGcTfXIWn70Ln+jGA2Kn3Psvke2ZTHHlxARQhH1
+YQ3Xut7u+pflkLkuNAq6J8/r2eVDi7GihpvHjtQpfM362gPm0EhBFr3sjYEEollX
+qnkas+C8Vu8YBGX3fCeef008Jhllk8FV64X3+/E6egH2SzsyCL5VQ+KqjYYv33vK
+45Y/1Td4NLkBDQRTCzjpAQgAtYnmGhzeRXKGinL7u7FcXFP5aOTQgUMQxUBJ/8J7
+/DBPy+RhUDYopG1fWXqXaI3RdOj8MWup89qGlNsJ4ePvWY/WQnplMpM2q+Lrl3UN
+RsJeDyAdB0w/H7j0DCEiojcyJHR7fWWcRbTH+ZVZm8Q4qVPukrat0EddwSL+IIsJ
+GX7lztnGQim1MRr/iZwPMkHP1vzEOanhR/PUvstJhoYD40yS2k//+LsyxApWOwEM
+lopELK5blDNFkUV/G5jsvSKUXIKo3AlmnmczWAJLSJ3CHcIrHAUcjzUghCbi/r00
+9GTfnauc32Xa3TZ6te2vI/8ZASqqdlC/uFlppazXgfDpTQARAQABiQEfBBgBAgAJ
+BQJTCzjpAhsMAAoJEC6G98fgObSKdsoIAL6eJWg3a2jMYNPgbhoVGPpfpTPtUjEm
+9CoVOwFkiUZ81b7+cYb8vgzx8dBrVRM1ngZrvfc8dpQIwEp7qpeJkzyW/L/B+RjX
+C9CcC960+JH8EN7l9hu4OivqcBkLt9nPnr8Zc3khxUXrCZmlkLz5Raq+eUHJtN/l
+Cv6RYKW+hl+/Fr9Eind2rFJb3fpTdtueZ3HJwNCPlUj4auXMB3SzWbMW6CFrGBL8
+YqGDHAFpyThDbmYfeGm0UQ7KarpwD8ol2uA7mR7D5f44KaI6wISp8rAYE1Xgxvwi
+nEJGz7jP2XshkIG8l9En9iycOfrYwFbEhA2Y8RwZ+lcpGXLLv+Gf1QA=
+=XR20
+-----END PGP PUBLIC KEY BLOCK-----
+				</pre>
+			</div>
+			<div class="info">
+				<h1 title="Info">&#x24D8;</h1>
+				<p class="infoitem"><a href="mailto:tim@wimtie.org" target="_blank"><img src="img/mail2.png" class="labelicon" />tim@wimtie.org</a></p>
+				<p class="infoitem"><a href="#" data-reveal-id="gpgpubkey" onclick="showKey()"><img src="img/key.png" class="labelicon" />GPG key</a></p>
+			</div>
+			<div class="downarrow">&#x21DF;</div>
+		</div>
+		<div class="section" id="s2">
+			<div class="info">
+				<h1 title="Music">&#x266B;</h1>
+				<p class="infoitem"><a href="http://www.bodypoliticsmusic.com" target="_blank">Bodypolitics</a></p>
+				<p class="infoitem"><a href="https://soundcloud.com/wimtie-pekelhaas" target="_blank">SoundCloud</a></p>
+			</div>
+			<div class="downarrow">&#x21DF;</div>
+		</div>
+		<div class="section" id="s3">
+			<div class="info">
+				<h1 title="Social / misc.">&#x263B;</h1>
+				<p class="infoitem"><a href="https://www.twitter.com/wimtie" target="_blank"><img src="img/twitter2.png" class="labelicon" />Twitter</a></p>
+				<p class="infoitem"><a href="https://www.linkedin.com/pub/tim-lamballais-tessensohn/19/446/33b" target="_blank"><img src="img/linkedin.png" class="labelicon" />Linkedin</a></p>
+				<p class="infoitem"><a href="http://stackoverflow.com/users/740027/tim-lamballais" target="_blank"><img src="img/so.png" class="labelicon" />stackoverflow</a></p>
+			</div>
+		</div>
+		<!--
+		<div class="section" id="s4">
+			<div class="info">
+				<p>lbaat</p>
+			</div>
+		</div>-->
+	</body>
+</html>
